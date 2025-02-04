@@ -1,0 +1,11 @@
+- name: Install "{{ package }}"
+  ansible.builtin.apt:
+    name: "{{ package }}"
+    state: present
+    update_cache: yes
+
+- name: Start "{{ package }}"
+  ansible.builtin.service:
+    name: "{{ package }}"
+    state: "{{ service }}"
+    enabled: yes
