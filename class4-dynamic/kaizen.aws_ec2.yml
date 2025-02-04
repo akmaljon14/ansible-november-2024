@@ -1,0 +1,13 @@
+plugin: amazon.aws.aws_ec2
+regions:
+  - us-east-2
+
+# filters:
+#   tag:Name: dev*
+
+keyed_groups:
+  - key: tags
+  - key: instance_type  ##command: ansible-inventory -i kaizen.aws_ec2.yml --graph
+                       
+                       
+                          ##ansible-inventory -i kaizen.aws_ec2.yml --list
